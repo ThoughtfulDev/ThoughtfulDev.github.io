@@ -9,6 +9,10 @@
     Description: This file contains all the scripts associated with the single-page
     portfolio website.
 */
+var host = 'thoughtful-dev.com'
+if ((host === window.location.host) && (window.location.protocol !== 'https:')) {
+  window.location.protocol = 'https'
+}
 
 (function ($) {
     // Remove no-js class
