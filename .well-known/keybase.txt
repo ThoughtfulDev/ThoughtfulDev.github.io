@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/thethoughtfuldev
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://thoughtful-dev.com
+  * I am thethoughtfuldev (https://keybase.io/thethoughtfuldev) on keybase.
+  * I have a public key ASBsuSbUKsAzzVbTJ9UmNFYALMUv9bZM3rIYxIgGC0XgqQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01206cb926d42ac033cd56d327d5263456002cc52ff5b64cdeb218c488060b45e0a90a",
+      "host": "keybase.io",
+      "kid": "01206cb926d42ac033cd56d327d5263456002cc52ff5b64cdeb218c488060b45e0a90a",
+      "uid": "c450a3535e3cc7167f62136ce111d119",
+      "username": "thethoughtfuldev"
+    },
+    "merkle_root": {
+      "ctime": 1503421728,
+      "hash": 
+"6a90c283706acb36e66175013b2a2afcdf8d8488b46a8df42da9b9075e35bdf2c4cd4e5c28ea8b87bf4e98379ba5add4a59fc71904901fd31a4f6d1682bf90d8",
+      "hash_meta": "03414edcd9e97c1a9c73637f2ffc2c088263cc1a72b2fbb45224d7a66ae98208",
+      "seqno": 1342330
+    },
+    "service": {
+      "hostname": "thoughtful-dev.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.29"
+  },
+  "ctime": 1503421765,
+  "expire_in": 504576000,
+  "prev": "3cc94bd603d5ba40467e5e9d649364f1f25ed4f4b6735cd9da74402a78ebe156",
+  "seqno": 5,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgbLkm1CrAM81W0yfVJjRWACzFL/W2TN6yGMSIBgtF4KkKp3BheWxvYWTFA1J7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwNmNiOTI2ZDQyYWMwMzNjZDU2ZDMyN2Q1MjYzNDU2MDAyY2M1MmZmNWI2NGNkZWIyMThjNDg4MDYwYjQ1ZTBhOTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNmNiOTI2ZDQyYWMwMzNjZDU2ZDMyN2Q1MjYzNDU2MDAyY2M1MmZmNWI2NGNkZWIyMThjNDg4MDYwYjQ1ZTBhOTBhIiwidWlkIjoiYzQ1MGEzNTM1ZTNjYzcxNjdmNjIxMzZjZTExMWQxMTkiLCJ1c2VybmFtZSI6InRoZXRob3VnaHRmdWxkZXYifSwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE1MDM0MjE3MjgsImhhc2giOiI2YTkwYzI4MzcwNmFjYjM2ZTY2MTc1MDEzYjJhMmFmY2RmOGQ4NDg4YjQ2YThkZjQyZGE5YjkwNzVlMzViZGYyYzRjZDRlNWMyOGVhOGI4N2JmNGU5ODM3OWJhNWFkZDRhNTlmYzcxOTA0OTAxZmQzMWE0ZjZkMTY4MmJmOTBkOCIsImhhc2hfbWV0YSI6IjAzNDE0ZWRjZDllOTdjMWE5YzczNjM3ZjJmZmMyYzA4ODI2M2NjMWE3MmIyZmJiNDUyMjRkN2E2NmFlOTgyMDgiLCJzZXFubyI6MTM0MjMzMH0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJ0aG91Z2h0ZnVsLWRldi5jb20iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4yOSJ9LCJjdGltZSI6MTUwMzQyMTc2NSwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsInByZXYiOiIzY2M5NGJkNjAzZDViYTQwNDY3ZTVlOWQ2NDkzNjRmMWYyNWVkNGY0YjY3MzVjZDlkYTc0NDAyYTc4ZWJlMTU2Iiwic2Vxbm8iOjUsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAFNNQBAVfURhmKAFHk7HzVceQO47d8RwCnFIgN5H6+bSE/Wymos8I+XkvE37XdmFHUhxduZjLMgxDwIK0gFUTAahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIO+pT0SWUhP1ekLy/V/hnRk/0ZV7TG97ME1zY/hHIi8wo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/thethoughtfuldev
+
+==================================================================
