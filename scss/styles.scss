@@ -28,6 +28,11 @@ body {
 
 .container {
   text-align: center;
+  @media (min-width: 601px) {
+    border:white solid 1px;
+    padding: 2%;
+  }
+
   h1 {
     font-family:'Roboto',sans-serif;
     line-height:17px;
@@ -83,5 +88,15 @@ body {
     i {
       padding:0 10px 0 10px;
     }
+
+    a {
+      font-size:1em;
+      opacity:0.8;
+    }
+
+    a:hover {
+      opacity:1;
+    }
+
   }
 }
