@@ -74,6 +74,14 @@ body {
     letter-spacing: 1.1px;
     font-weight:normal;
     color: #cfd8dc;
+
+    img {
+      opacity: 0.9;
+    }
+
+    img:hover {
+      opacity:1.0;
+    }
   }
 
   h4 {
@@ -85,6 +93,7 @@ body {
   }
 
   #contact {
+    padding-top:3px;
     i {
       padding:0 10px 0 10px;
     }
@@ -100,3 +109,19 @@ body {
 
   }
 }
+
+footer {
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: lighten($bg-color, 5);
+  height:40px;
+  
+
+  #text {
+    text-align: center;
+    padding-top:13px;
+    font-size:0.9em;
+  }
+}
+
