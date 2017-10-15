@@ -110,6 +110,16 @@ body {
   }
 }
 
+#supericons {
+  width: 48px;
+  height: 48px;
+  @media (max-width: 600px) {
+    width: 24px;
+    height: 24px;
+  }
+
+}
+
 footer {
   position:absolute;
   bottom: 0;
