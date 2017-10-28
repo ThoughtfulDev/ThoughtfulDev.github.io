@@ -10,12 +10,22 @@
         <link rel="stylesheet" href="css/normalize.min.css">
         <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/styles.css">  
+        <script src="baffle.min.js"></script>
+        
         <script>
           //HTTPS redirect
           if(window.location.protocol != 'https:') {
             location.href = location.href.replace('http://', 'https://')
           }
+          document.addEventListener('DOMContentLoaded', function() {
+            var credits = baffle(document.querySelectorAll('.cypher'), {
+              speed: 90,
+              characters: 'abcdef0123456789\\#^<>/&%$§"!)=(´`-.'
+              }).start();
+            credits.reveal(1200);       
+          });
+
         </script>
 
     </head>
@@ -46,13 +56,11 @@
 
 
       </div>
-
       <footer>
-        <div id="text">
+        <div id="text" class="cypher">
           Made with the help of <i>Supergirl, The Flash and Arrow</i> <i class="fa fa-heart" aria-hidden="true"></i>
         </div>
       </footer>
-
 
 
     </body>
