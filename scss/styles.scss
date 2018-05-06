@@ -27,10 +27,19 @@ body {
 }
 
 .container {
+  z-index: 2;
+  background-color: darken($bg-color, 1);
   text-align: center;
   @media (min-width: 601px) {
     border:white solid 1px;
     padding: 2%;
+  }
+
+  @media (max-width: 600px) {
+    border-top:    1px solid white;
+    border-bottom:    1px solid white;
+    padding-left:5px;
+    padding-right:5px;
   }
 
   h1 {
@@ -121,6 +130,7 @@ body {
 }
 
 .projects {
+  z-index: 2;
   text-align:left;
   font-size:1em;
   padding-top:5px;
@@ -135,6 +145,7 @@ body {
 }
 
 footer {
+  z-index: 2;
   position:absolute;
   bottom: 0;
   width: 100%;
@@ -149,3 +160,18 @@ footer {
   }
 }
 
+
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+} 
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
