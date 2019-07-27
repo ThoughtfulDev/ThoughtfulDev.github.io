@@ -50,12 +50,6 @@ body {
     letter-spacing: 2.5px;
   }
 
-  #heading:after {
-    content: 'ThoughtfulDev';
-    -webkit-animation: fadeinout 1s linear forwards;
-    animation: fadeinout 1s linear forwards;
-  }
-
   #heading:hover {
     cursor:pointer;
     content: 'ADD';
@@ -71,10 +65,6 @@ body {
   @keyframes fadeinout {
     0% { opacity: 0; }
     50% { opacity: 1; }
-  }
-
-  #heading:hover:after {
-    content: '방탄소년단';
   }
 
   h3 {
