@@ -15,7 +15,3 @@ gulp.task('styles', function() {
         .pipe(autoprefixer())
         .pipe(gulp.dest('css'));
 });
-
-gulp.task('watch', ['styles'], function() {
-    gulp.watch('scss/*.scss', ['styles']);
-});
