@@ -23,79 +23,7 @@
     <div class="grid"></div>
   </div>
 
-  <main class="shell">
-    <header class="hero">
-      <div class="eyebrow">
-        <span class="pill">Portfolio</span>
-        <span class="pill pill--muted">ThoughtfulDev</span>
-      </div>
-      <h1>ThoughtfulDev</h1>
-      <p class="lede">A little bit of black, and a little bit of pink</p>
-      <div class="cta-row">
-        <a class="btn btn--primary" href="https://github.com/ThoughtfulDev/" target="new" rel="noopener">
-          <i class="fa fa-github" aria-hidden="true"></i>
-          GitHub
-        </a>
-        <a class="btn btn--ghost" href="https://www.buymeacoffee.com/supergirl" target="_blank" rel="noopener">
-          <i class="fa fa-coffee" aria-hidden="true"></i>
-          Buy me a coffee
-        </a>
-      </div>
-    </header>
-
-    <section class="panel">
-      <div class="panel__header">
-        <p class="label">Projects</p>
-        <h2>Selected work</h2>
-      </div>
-      <div class="cards">
-        <article class="card">
-          <div class="icon-wrap"><i class="fa fa-tv" aria-hidden="true"></i></div>
-          <div class="card__body">
-            <h3>Anime4K</h3>
-            <p>Encode Anime using Anime4K easily!</p>
-          </div>
-          <a class="card__link" href="https://github.com/ThoughtfulDev/Anime4K" target="new" rel="noopener">View project</a>
-        </article>
-
-        <article class="card">
-          <div class="icon-wrap"><i class="fa fa-book" aria-hidden="true"></i></div>
-          <div class="card__body">
-            <h3>Bachelor Thesis</h3>
-            <p>Analyzing MRI with Deep Learning</p>
-          </div>
-          <a class="card__link" href="https://github.com/ThoughtfulDev/BachelorThesis" target="new" rel="noopener">View project</a>
-        </article>
-
-        <article class="card">
-          <div class="icon-wrap"><i class="fa fa-eye" aria-hidden="true"></i></div>
-          <div class="card__body">
-            <h3>EagleEye</h3>
-            <p>stalk your Friends easily</p>
-          </div>
-          <a class="card__link" href="https://github.com/ThoughtfulDev/EagleEye" target="new" rel="noopener">View project</a>
-        </article>
-
-        <article class="card">
-          <div class="icon-wrap"><i class="fa fa-lock" aria-hidden="true"></i></div>
-          <div class="card__body">
-            <h3>SupergirlOnCrypt</h3>
-            <p>CryptoTrojan in Python</p>
-          </div>
-          <a class="card__link" href="https://github.com/ThoughtfulDev/SupergirlOnCrypt" target="new" rel="noopener">View project</a>
-        </article>
-
-        <article class="card">
-          <div class="icon-wrap"><i class="fa fa-usb" aria-hidden="true"></i></div>
-          <div class="card__body">
-            <h3>PyDuckGen</h3>
-            <p>Get your USB Rubber Ducky up faster</p>
-          </div>
-          <a class="card__link" href="https://github.com/ThoughtfulDev/PyDuckGen" target="new" rel="noopener">View project</a>
-        </article>
-      </div>
-    </section>
-  </main>
+  <main id="app" class="shell"></main>
 
   <footer class="footer">
     <div>
@@ -107,17 +35,89 @@
     </div>
   </footer>
 
-  <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script type="text/javascript">
+    const { useEffect } = React;
 
-    document.querySelectorAll('.card').forEach(card => observer.observe(card));
+    const projects = [
+      { title: 'Anime4K', desc: 'Encode Anime using Anime4K easily!', href: 'https://github.com/ThoughtfulDev/Anime4K', icon: 'fa-tv' },
+      { title: 'Bachelor Thesis', desc: 'Analyzing MRI with Deep Learning', href: 'https://github.com/ThoughtfulDev/BachelorThesis', icon: 'fa-book' },
+      { title: 'EagleEye', desc: 'stalk your Friends easily', href: 'https://github.com/ThoughtfulDev/EagleEye', icon: 'fa-eye' },
+      { title: 'SupergirlOnCrypt', desc: 'CryptoTrojan in Python', href: 'https://github.com/ThoughtfulDev/SupergirlOnCrypt', icon: 'fa-lock' },
+      { title: 'PyDuckGen', desc: 'Get your USB Rubber Ducky up faster', href: 'https://github.com/ThoughtfulDev/PyDuckGen', icon: 'fa-usb' }
+    ];
+
+    const Pill = ({ children, muted }) => (
+      React.createElement('span', { className: `pill${muted ? ' pill--muted' : ''}` }, children)
+    );
+
+    const Button = ({ href, children, variant }) => (
+      React.createElement('a', { className: `btn ${variant === 'ghost' ? 'btn--ghost' : 'btn--primary'}`, href, target: 'new', rel: 'noopener' }, children)
+    );
+
+    const ProjectCard = ({ project }) => (
+      React.createElement('article', { className: 'card fade-in' },
+        React.createElement('div', { className: 'icon-wrap' },
+          React.createElement('i', { className: `fa ${project.icon}`, 'aria-hidden': 'true' })
+        ),
+        React.createElement('div', { className: 'card__body' },
+          React.createElement('h3', null, project.title),
+          React.createElement('p', null, project.desc)
+        ),
+        React.createElement('a', { className: 'card__link', href: project.href, target: 'new', rel: 'noopener' }, 'View project')
+      )
+    );
+
+    const App = () => {
+      useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.fade-in').forEach(card => observer.observe(card));
+      }, []);
+
+      return (
+        React.createElement(React.Fragment, null,
+          React.createElement('header', { className: 'hero' },
+            React.createElement('div', { className: 'eyebrow' },
+              React.createElement(Pill, null, 'Portfolio'),
+            ),
+            React.createElement('h1', null, 'ThoughtfulDev'),
+            React.createElement('div', { className: 'cta-row' },
+              React.createElement(Button, { href: 'https://github.com/ThoughtfulDev/' },
+                React.createElement('i', { className: 'fa fa-github', 'aria-hidden': 'true' }),
+                'GitHub'
+              ),
+              React.createElement(Button, { href: 'https://www.buymeacoffee.com/supergirl', variant: 'ghost' },
+                React.createElement('i', { className: 'fa fa-coffee', 'aria-hidden': 'true' }),
+                'Buy me a coffee'
+              )
+            )
+          ),
+          React.createElement('section', { className: 'panel' },
+            React.createElement('div', { className: 'panel__header' },
+              React.createElement('p', { className: 'label' }, 'Projects'),
+              React.createElement('h2', null, 'Selected work')
+            ),
+            React.createElement('div', { className: 'cards' },
+              projects.map(project =>
+                React.createElement(ProjectCard, { key: project.title, project })
+              )
+            )
+          )
+        )
+      );
+    };
+
+    const root = ReactDOM.createRoot(document.getElementById('app'));
+    root.render(React.createElement(App));
   </script>
 </body>
 </html>

@@ -24,9 +24,9 @@ body {
 body {
   margin: 0;
   font-family: 'Manrope', 'Space Grotesk', system-ui, -apple-system, sans-serif;
-  background: radial-gradient(circle at 20% 20%, rgba(125, 211, 252, 0.08), transparent 25%),
-    radial-gradient(circle at 80% 0%, rgba(167, 139, 250, 0.12), transparent 30%),
-    linear-gradient(140deg, #0a0b18 0%, #0d0f21 60%, #0c0f1d 100%);
+  background: radial-gradient(circle at 20% 20%, rgba(125, 211, 252, 0.14), transparent 26%),
+    radial-gradient(circle at 82% 18%, rgba(167, 139, 250, 0.16), transparent 32%),
+    linear-gradient(145deg, #090b16 0%, #0d0f21 62%, #10132a 100%);
   color: var(--text);
   min-height: 100vh;
   display: grid;
@@ -67,20 +67,23 @@ a:hover {
   width: 420px;
   height: 420px;
   border-radius: 50%;
-  filter: blur(110px);
-  opacity: 0.6;
+  filter: blur(120px);
+  opacity: 0.75;
+  animation: float 14s ease-in-out infinite;
 }
 
 .orb--one {
   background: #7dd3fc;
   top: -120px;
   left: -160px;
+  animation-delay: -4s;
 }
 
 .orb--two {
   background: #a78bfa;
   bottom: -160px;
   right: -120px;
+  animation-delay: -8s;
 }
 
 .shell {
@@ -192,6 +195,8 @@ h1 {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 12px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
 }
 
 .label {
@@ -225,7 +230,7 @@ h1 {
   overflow: hidden;
   transform: translateY(6px);
   opacity: 0;
-  transition: transform 0.4s ease, opacity 0.4s ease, border 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease, border 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card::before {
@@ -245,6 +250,7 @@ h1 {
 .card:hover {
   border-color: rgba(125, 211, 252, 0.4);
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+  transform: translateY(-2px);
 }
 
 .card:hover::before {
@@ -314,6 +320,12 @@ h1 {
 
 .footer__link:hover {
   color: var(--accent);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(18px); }
+  100% { transform: translateY(0px); }
 }
 
 @media (max-width: 700px) {
