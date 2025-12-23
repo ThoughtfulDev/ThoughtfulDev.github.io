@@ -33,7 +33,7 @@ body {
   grid-template-rows: 1fr auto;
   padding: 48px clamp(18px, 3vw, 48px);
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 a {
