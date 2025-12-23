@@ -16,11 +16,6 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  height: 100%;
-}
-
 body {
   margin: 0;
   font-family: 'Manrope', 'Space Grotesk', system-ui, -apple-system, sans-serif;
@@ -34,6 +29,7 @@ body {
   padding: 48px clamp(18px, 3vw, 48px);
   position: relative;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 a {
