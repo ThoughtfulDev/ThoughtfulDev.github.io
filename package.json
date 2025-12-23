@@ -1,18 +1,9 @@
 {
-  "name": "thoughtful-dev.com",
-  "version": "1.0.0",
-  "description": "nothing to see here",
-  "main": "gulpfile.js",
-  "scripts": {
-    "start": "gulp watch"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-plumber": "^1.2.1",
-    "gulp-sass": "^5.1.0",
-    "sass": "^1.69.7"
-  }
+  "name": "thoughtfuldev-site",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Static portfolio for ThoughtfulDev.",
+  "scripts": {},
+  "keywords": [],
+  "license": "MIT"
 }
